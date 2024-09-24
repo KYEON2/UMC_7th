@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Layout</title>
+  <style>
+    .nav {
+      background-color: purple;
+      color: white;
+      box-sizing: border-box;
+      padding: 10px;
+    }
+
+    /* 기본 레이아웃 - 가로로 배치 */
+    .nav div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .right_box {
+      display: flex;
+      flex-direction: row;
+      width: 300px;
+      justify-content: space-between;
+    }
+
+    .box1,
+    .box2,
+    .box3,
+    .box4 {
+      width: 100px;
+      padding: 10px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      .box1 {
+        display: none !important; /* !important를 사용하여 강제 적용 */
+      }
+
+      .right_box {
+        width: 100%; 
+        justify-content: space-between;
+      }
+
+      .box2,
+      .box3,
+      .box4 {
+        width: auto; 
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="nav">
+    <div>
+      <div class="box1">SMUMC</div>
+      <div class="right_box">
+        <div class="box2">Project</div>
+        <div class="box3">Members</div>
+        <div class="box4">Notice</div>
+      </div>
+    </div>
+  </nav>
+</body>
+
+</html>

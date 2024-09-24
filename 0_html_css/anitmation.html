@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bouncing Ball</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      margin: 50px;
+      border-radius: 50%;
+      background-color: pink;
+      color: white;
+      box-sizing: border-box;
+      position: relative;
+      bottom: -150px;
+      right: -30px;
+      transform: rotate(45deg);
+      transition: background-color 0.1s ease-in-out 1s;
+      animation: bounce 1s ease-in-out infinite alternate;
+    }
+
+    .box:hover {
+      background-color: purple; /* 마우스를 올리면 보라색으로 변경 */
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(0); /* 원래 위치 */
+      }
+      100% {
+        transform: translateY(-100px); /* 위로 100px 이동 */
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+</body>
+
+</html>

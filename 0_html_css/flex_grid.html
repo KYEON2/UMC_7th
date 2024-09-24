@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid and Flex Layout</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      font-size: 23px;
+      display: grid;
+      grid-template-areas: 
+        "header menu"
+        "hero hero"
+        "flex-container flex-container"
+        "banner banner";
+      grid-template-columns: 1fr 3fr;
+      grid-template-rows: 80px 300px 1fr 100px;
+      height: 100vh;
+    }
+
+    .header {
+      grid-area: header;
+      background-color: #1a1a2e;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .menu {
+      grid-area: menu;
+      background-color: #e84545;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero {
+      grid-area: hero;
+      background-color: #53354a;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .flex-container {
+      grid-area: flex-container;
+      display: flex;
+      height: 100%;
+    }
+
+    .main {
+      background-color: #1a1a2e;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%; /* main의 너비를 50%로 설정 */
+    }
+
+    .side-container {
+      display: flex;
+      flex-direction: column; /* 세로로 배열 */
+      width: 50%; /* image와 extra를 위한 너비 */
+      align-items: end;
+    }
+
+    .image, .extra {
+      background-color: #a8d0e6;
+      width: 50%;
+      color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1; /* 공간을 균등하게 나누기 위해 flex 사용 */
+    }
+
+    .image {
+      background-color: #a8d0e6; /* image의 배경색 */
+    }
+
+    .extra {
+      background-color: #74c69d; /* extra의 배경색 */
+    }
+
+    .banner {
+      grid-area: banner;
+      background-color: #ffdd93;
+      color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">HEADER</div>
+    <div class="menu">MENU</div>
+    <div class="hero">HERO</div>
+    <div class="flex-container">
+      <div class="main">MAIN</div>
+      <div class="side-container">
+        <div class="image">IMAGE</div>
+        <div class="extra">EXTRA</div>
+      </div>
+    </div>
+    <div class="banner">BANNER</div>
+  </div>
+</body>
+
+</html>
