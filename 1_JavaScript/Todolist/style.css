@@ -18,6 +18,15 @@ h1 {
     text-align: center;
 }
 
+.bar2 {
+    border: none; /* 기본 테두리 제거 */
+    width: 70px;
+    height: 2px; /* 수평선의 높이 (두께) 설정 */
+    background-color: #add3ec; /* 원하는 배경색 설정 */
+    margin-top: 5px; /* 여백 추가 (옵션) */
+    margin-bottom: 5px; /* 여백 추가 (옵션) */
+}
+
 
 input::placeholder {
     font-style: italic;
@@ -39,7 +48,13 @@ p{
     text-align: center;
 }
 
-
+.complete-button, .delete-button{
+    background-color: #add3ec;
+    border: 0px;
+    padding: 2px;
+    width: 30px;
+    height: 25px;
+}
 
 
 .will_do li::before, .done::before { /*display: flex 속성을 li 요소에 적용하면, 기본적으로 브라우저가 list-style을 렌더링하지 않게 되어 리스트 스타일(점)이 사라지는 문제가 발생*/
@@ -55,9 +70,11 @@ p{
     display: flex;
     justify-content: space-between;
     align-items: center;    
-    margin-top: 7px;
+    margin: 7px 0px;
+    padding: 7px 0px;
     list-style-type: none; /* 기본 리스트 점 제거 */
     position: relative;
     padding-left: 20px; /* 점과 텍스트 사이 간격 */
+    border-bottom: 2px solid #add3ec;
 }
 

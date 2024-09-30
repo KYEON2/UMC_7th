@@ -31,6 +31,7 @@ function moveToCompleted(taskItem) {
 
     const deleteButton = document.createElement('button');
     deleteButton.textContent = '삭제';
+    deleteButton.classList.add('delete-button');
     deleteButton.addEventListener('click', function() {
         taskItem.remove(); // 항목 삭제
     });
