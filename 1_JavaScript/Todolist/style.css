@@ -30,13 +30,8 @@ input::placeholder {
     justify-content: space-between;
 }
 
-.will_do{
-    width: 150px;
-    margin: 20px;
-}
-
-.done{
-    width: 150px;
+.will_do, .done{
+    width: 180px;
     margin: 20px;
 }
 
@@ -44,28 +39,15 @@ p{
     text-align: center;
 }
 
-.complete-button{
-    display: flex;
-    justify-content: end;
-}
 
-.will_do li{
-    text-decoration: dotted;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;    
-    margin-top: 5px;
-    list-style-type: none; /* 기본 리스트 점 제거 */
-    position: relative;
-    padding-left: 20px; /* 점과 텍스트 사이 간격 */
-}
 
-.will_do li::before, .done::before {
-    content: '•'; /* 점 기호 */
+
+.will_do li::before, .done::before { /*display: flex 속성을 li 요소에 적용하면, 기본적으로 브라우저가 list-style을 렌더링하지 않게 되어 리스트 스타일(점)이 사라지는 문제가 발생*/
+    content: '•'; 
     position: absolute;
-    left: 0; /* li 왼쪽에 위치 */
-    font-size: 16px; /* 점 크기 */
-    color: black; /* 점 색상 */
+    left: 0; 
+    font-size: 16px; 
+    color: black; 
 }
 
 .will_do li, .done li{

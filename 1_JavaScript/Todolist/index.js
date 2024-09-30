@@ -1,9 +1,9 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() { // HTML 문서가 완전히 로드된 후 특정 입력 필드에서 'Enter' 키를 누를 때, 입력된 내용을 처리하여 할 일 목록에 추가하는 기능을 구현
     const input = document.querySelector('.plan'); // 입력 필드 선택
 
     input.addEventListener('keypress', function(event) {
         if (event.key === 'Enter' && this.value.trim() !== '') {
-            addTask(this.value.trim()); // 입력된 값으로 새로운 할 일 추가
+            addTask(this.value.trim()); // 입력된 값으로 새로운 할 일 추가 // 앞뒤 공백을 제거한 입력 필드의 값을 addTask() 함수에 전달
             this.value = ''; // 입력 필드 초기화
         }
     });
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function addTask(task) {
     const todoList = document.querySelector('.will_do'); // "해야 할 일" 목록 선택
-    const li = document.createElement('li');
+    const li = document.createElement('li'); // 요소를 생성하는 것
     li.textContent = task;
 
     const completeButton = document.createElement('button');
