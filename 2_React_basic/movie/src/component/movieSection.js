@@ -18,7 +18,7 @@ export default function MovieSection({
     >
       <div> 
         {isMouse ? (
-          <div className="over-view">
+          <div className="over-view"> 
             {overview}
           </div>
         ) : null}
@@ -29,7 +29,7 @@ export default function MovieSection({
       </div>
       <div className="movie-explain">
         <div>{original_title}</div>
-        <div>⭐{vote_average}</div>
+        <div>⭐{vote_average}</div> 
       </div>
     </div>
   );
