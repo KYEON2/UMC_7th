@@ -1,0 +1,14 @@
+/* Center align */
+.App {
+  text-align: center;
+}
+
+
+.movie-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* 카드가 가능한 공간에 맞춰 변화 */
+  gap: 20px; 
+  max-width: 100%; 
+  margin: 20px auto;
+}
+
