@@ -49,9 +49,9 @@ const ErrorText = styled.h1`
 //여기서 value는 onchange되는 값들 e.target.value
 function Login() {
   const login = useForm({
-    initalValue: {
+    initialValue: {
       email: '',
-      password: ''
+      password: '',
     },
     validate: validateLogin
   })

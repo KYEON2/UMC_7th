@@ -1,10 +1,10 @@
 import { useState } from "react"
 import { useEffect } from "react"
 
-function useForm ({initalValue, validate}) {
-    const [values, setValues] = useState(initalValue)
-    const [touched, setTouched] = useState()
-    const [errors, setErrors] = useState()
+function useForm ({initialValue, validate}) {
+    const [values, setValues] = useState(initialValue)
+    const [touched, setTouched] = useState({})
+    const [errors, setErrors] = useState({})
 
     const handleChangeInput = (name, value) => {
         setValues({
