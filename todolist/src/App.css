@@ -1,0 +1,69 @@
+.App {
+  text-align: center;
+}
+
+input {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.todoInputCon {
+  display: flex;
+  margin: 30px auto; 
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+}
+
+.todoInput {
+  box-sizing: border-box; /*box-sizing: border-box;를 사용하면, 요소의 padding과 border가 요소의 전체 크기에 포함되도록 설정*/
+  margin-right: 10px;
+  width: 100%;
+  height: 35px;
+  border-color: black;
+  border-radius: 5px;
+}
+
+.todoButton {
+  height: 35px;
+  border-color: black;
+  border-radius: 5px;
+}
+
+.todoOneLine{
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  height: 45px;
+  border: 2px solid black;
+  border-radius: 5px;
+  gap: 10px;
+}
+
+.list {
+  display: flex;
+  width: 500px;
+  align-items: center;
+  justify-items: center;
+}
+
+.ButtonCon {
+  display: flex;
+  justify-content: flex-end;
+  width: 100px;
+  gap: 10px; /* 버튼들 사이 간격 */
+}
+
+.Button {
+  border: 1.5px solid black;
+  border-radius: 5px;
+}
+
+
+
