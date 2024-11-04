@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import useForm from "../hooks/useForm";
-import { validateSignUp, validateUser } from "../utils/validate";
+import { validateSignUp } from "../utils/validate";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Con = styled.div`
     background-color: black;
@@ -62,13 +64,33 @@ function Signup() {
     }
   });
 
-  const handleSubmit = (event) => {
+  const navigate = useNavigate();
+  const handleSubmit = async (event) => {
     event.preventDefault();
+  
     if (Object.keys(signup.errors).length === 0) {
-      alert("회원가입 성공!");
-      // 회원가입 처리 로직 추가
+      try {
+        const response = await axios.post("http://localhost:3000/auth/register", {
+          email: signup.values.email,
+          password: signup.values.password,
+          passwordCheck: signup.values.confirmPassword
+        });
+  
+        if (response.status === 200 || response.status === 201) {
+          alert("회원가입 성공!");
+          navigate("/login");
+        }
+      } catch (error) {
+        if (error.response) {
+          alert(`회원가입 실패: ${error.response.data.message}`);
+        } else {
+          alert("회원가입 중 오류가 발생했습니다.");
+          console.error(error);
+        }
+      }
     }
   };
+  
 
   return (
     <Con>
