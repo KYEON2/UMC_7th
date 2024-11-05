@@ -4,7 +4,9 @@ import { FiSearch } from 'react-icons/fi';
 import { PiFilmSlateDuotone } from "react-icons/pi";
 
 const SidebarContainer = styled.div`
-  width: 120px; 
+  width: 110px; 
+  min-width: 110px;
+  max-width: 110px;
   background-color: #333; 
   padding: 20px;
   display: flex;

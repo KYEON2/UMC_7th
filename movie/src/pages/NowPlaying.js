@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import MovieSection from "../component/movieSection";
-import {useNavigate} from "react-router-dom";
 import '../App.css';
 import useCustomFetch from '../hooks/useCustomFetch';
+import Card from '../component/Card';
+import * as S from '../pages/Search/search.style'
 
 const Con = styled.div`
     background-color: black;
@@ -18,7 +18,6 @@ const Con = styled.div`
 function NowPlaying() {
 
   const {data:movies, isLoading, isError} = useCustomFetch(`/movie/now_playing?language=en-US&page=1`)
-  const navigate = useNavigate();
 
   if (isLoading) {
     return <div>
@@ -33,21 +32,13 @@ function NowPlaying() {
   }
 
 
-  const handleMovieClick = (movieId) => {
-    navigate(`/movies/${movieId}`);
-  };
-
   return (
     <Con>
-      <div className="movie-container">
-        {movies?.results?.map((movie, i) => {
-          return (
-            <div key={i} onClick={() => handleMovieClick(movie.id)}>
-              <MovieSection {...movie} />
-            </div>
-          );
-        })}
-      </div>
+      <S.MovieGridContainer>
+            {movies?.results?.map((movie, i) => (
+                <Card key={i} movie={movie} />
+            ))}
+      </S.MovieGridContainer>
     </Con>
   );
 }

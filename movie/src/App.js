@@ -5,7 +5,7 @@ import Movie from './movie';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
-import Search from './pages/Search';
+import Search from './pages/Search/Search';
 import Category from './pages/Category';
 import NowPlaying from './pages/NowPlaying';
 import Popular from './pages/Popular';
