@@ -42,7 +42,7 @@ const SearchPage = () => {
                 onKeyDown={handleSearchMovieWithKeyboard}></S.Input>
                 <S.Button onClick={handleSearchMovie}>검색</S.Button>
             </S.SearchContainer>
-            <SearchMovielist searchValue={searchValue}/>
+            <SearchMovielist/>
             
         </S.PageCon>
     );
